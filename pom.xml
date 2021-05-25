@@ -56,9 +56,10 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- Eureka依赖包 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-netflix-eureka-client</artifactId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
 			<exclusions>
 				<exclusion>
 					<groupId>org.springframework.boot</groupId>
@@ -67,6 +68,17 @@
 				<exclusion>
 					<artifactId>org.springframework.boot</artifactId>
 					<groupId>spring.boot.starter-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<!--  健康监测依赖包-->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -85,6 +97,11 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+		<!-- 解决无法读取bootstrap.properties的spring.application.name变量问题. -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-context</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>commons-codec</groupId>
